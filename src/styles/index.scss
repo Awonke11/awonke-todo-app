@@ -1,5 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap');
+@import './mixins';
 
-* {
-    font-family: 'Poppins';
+.container {
+    @include displayType(row, none, none);
+    @include dimensions(100%, 100vh, 2rem);
+
+    #{&}-side-navigation {
+        @include dimensions(20%, 100%, 0);
+        
+        &-nested {
+            @include dimensions(100%, 100%, 1rem);
+            background-color: $light-secondary-color;
+            border-radius: $main-border-radius;
+            @include displayType(column, none, none);
+        }
+
+        .navigation {
+            @include displayType(column, none, none);
+            @include dimensions(100%, 65%, 0);
+            margin-bottom: 3.5rem;
+            
+            &-profile-and-widget {
+                margin-bottom: 3.5rem;
+
+                &-logo {
+                    @include dimensions(6rem, 6rem, 0);
+                    border-radius: 50%;
+                }
+
+                .widget {
+                    &-time {
+                        color: $main-color;
+                        font-size: $clock-font-size;
+                    }
+                    &-date {
+                        font-size: $secondary-font-size;
+                    }
+                }
+            }
+
+            &-links {
+                &-title {
+                    @include nav-title;
+                }
+                &-link {
+                    @include displayType(row, center, none);
+                    text-decoration: none;
+                    color: $black-color;
+
+                    .icon {
+                        font-size: 1.2rem;
+                        margin-right: .5rem;
+                    }
+                    &-title {
+                        font-size: $secondary-font-size;
+                    }
+                }
+            }
+
+            &-links .active {
+                color: $main-color;
+            }
+        }
+
+        .themes {
+            &-title {
+                @include nav-title;
+            }
+
+            .theme {
+                @include displayType(row, center, none);
+                text-decoration: none;
+                color: $black-color;
+                cursor: pointer;
+                margin-bottom: .2rem;
+
+                &-icon {
+                    font-size: 1.2rem;
+                    margin-right: .5rem;
+                }
+                &-title {
+                    font-size: $secondary-font-size;
+                }
+            }
+        }
+    }
+
+    #{&}-main-container {
+        @include dimensions(80%, 100%, 0);
+        padding-left: 2rem;
+
+        .search-bar {
+            @include displayType(row, center, none);
+            @include dimensions(100%, 10%, 0);
+            border-bottom: 2px solid $black-color;
+            margin-bottom: 1em;
+
+            &-icon {
+                font-size: 1.5rem;
+                color: $main-color;
+                margin-right: .7em;
+                cursor: pointer;
+            }
+
+            &-input {
+                @include dimensions(95%, 70%, 0);
+                font-size: $secondary-font-size;
+                border: none;
+                outline: none;
+                font-weight: $light;
+            }
+        }
+    }
 }
+
+
+

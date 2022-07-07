@@ -1,0 +1,28 @@
+@import './variables';
+
+@mixin displayType($direction, $alignment, $justification) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $alignment;
+    justify-content: $justification;
+}
+
+@mixin allButton($paddingType, $widthType) {
+    border: none;
+    outline: none;
+    background-color: $main-color;
+    padding: $paddingType;
+    width: $widthType;
+}
+
+@mixin dimensions($width, $height, $padding) {
+    width: $width;
+    height: $height;
+    padding: $padding;
+}
+
+@mixin nav-title() {
+    font-size: $nav-titles-font-size;
+    color: $main-color;
+    margin-bottom: .4rem;
+}

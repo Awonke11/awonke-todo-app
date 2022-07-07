@@ -1,0 +1,97 @@
+@import './mixins';
+
+.container-main-container {
+    @include dimensions(100%, 90%, 0);
+
+    .container-main-content {
+        @include dimensions(100%, 90%, 0);
+        
+        &-heading {
+            @include displayType(row, center, space-between);
+            width: 100%;
+            margin: 2rem 0;
+
+            &-title {
+                font-size: $title-font-size;
+                font-weight: $bold;
+            }
+
+            &-add-todo {
+                cursor: pointer;
+                @include displayType(row, center, none);
+                color: $white-color;
+                background-color: $main-color;
+                padding: .8rem;
+                border-radius: $secodary-border-radius;
+
+                &-title {
+                    font-size: 1rem;
+                    margin-right: .5rem;
+                }
+            }
+        }
+
+        &-todos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+
+            .todo-sections {
+                @include dimensions(100%, 100%, 0);
+
+                &-heading {
+                    @include displayType(row, center, space-between);
+                    border-bottom: 3px solid $not-started-color;
+                    padding-bottom: .5rem;
+                    margin-bottom: 1rem;
+
+                    &-title {
+                        font-size: $secondary-font-size;
+                        font-weight: $medium;
+                    }
+
+                    &-todos-number {
+                        @include dimensions(1rem, 1rem, .8rem);
+                        @include displayType(row, center, center);
+                        background-color: $not-started-color;
+                        border-radius: 50%;
+                    }
+                }
+
+                .todo-component {
+                    width: 100%;
+                    border-radius: $main-border-radius;
+                    background-color: $light-secondary-color;
+                    padding: 1rem;
+                    margin-bottom: 1rem;
+
+                    &-heading {
+                        @include displayType(row, center, space-between);
+                        margin-bottom: .3rem;
+
+                        &-navigate {
+                            .icon {
+                                margin-right: .5rem;
+                                cursor: pointer;
+                            }
+                            .not-started {
+                                color: $not-started-color;
+                            }
+                            .in-progress {
+                                color: $in-progress-color;
+                            }
+                            .completed {
+                                color: $complete-color;
+                            }
+                        }
+
+                        &-delete {
+                            color: $black-color;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
