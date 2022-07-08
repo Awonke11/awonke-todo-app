@@ -10,6 +10,7 @@ const TodoSections = () => {
       </div>
       <div className='todo-sections-display'>
         <TodoComponent />
+        <TodoComponent />
       </div>
     </div>
   )

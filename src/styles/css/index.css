@@ -15,6 +15,7 @@
   width: 100%;
   height: 100vh;
   padding: 2rem;
+  overflow: hidden;
 }
 .container .container-side-navigation {
   width: 20%;
@@ -24,7 +25,7 @@
 .container .container-side-navigation-nested {
   width: 100%;
   height: 100%;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: #E8EEED;
   border-radius: 20px;
   display: flex;
@@ -58,9 +59,12 @@
 .container .container-side-navigation .navigation-profile-and-widget .widget-date {
   font-size: 20px;
 }
+.container .container-side-navigation .navigation-links {
+  margin-bottom: 0.5rem;
+}
 .container .container-side-navigation .navigation-links-title {
   font-size: 25px;
-  color: #04A7BD;
+  color: #000000;
   margin-bottom: 0.4rem;
 }
 .container .container-side-navigation .navigation-links-link {
@@ -83,7 +87,7 @@
 }
 .container .container-side-navigation .themes-title {
   font-size: 25px;
-  color: #04A7BD;
+  color: #000000;
   margin-bottom: 0.4rem;
 }
 .container .container-side-navigation .themes .theme {

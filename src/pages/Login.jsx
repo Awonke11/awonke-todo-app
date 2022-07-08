@@ -1,4 +1,5 @@
 import React from 'react';
+import LoginPrompt from '../components/LoginPrompt';
 import Navigation from '../components/Navigation';
 import SearchBar from '../components/SearchBar';
 import Theme from '../components/Theme';
@@ -18,7 +19,8 @@ const Login = () => {
       <div className='container-main-container'>
         <SearchBar />
         <main className='container-main-content'>
-          <h1>Login</h1>
+        <h1 className='container-main-content-title'>Login</h1>
+        <LoginPrompt />
         </main>
       </div>
     </div>

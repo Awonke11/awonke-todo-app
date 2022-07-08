@@ -58,36 +58,39 @@
                     }
                 }
 
-                .todo-component {
-                    width: 100%;
-                    border-radius: $main-border-radius;
-                    background-color: $light-secondary-color;
-                    padding: 1rem;
-                    margin-bottom: 1rem;
-
-                    &-heading {
-                        @include displayType(row, center, space-between);
-                        margin-bottom: .3rem;
-
-                        &-navigate {
-                            .icon {
-                                margin-right: .5rem;
+                &-display {
+                    overflow-y: auto;
+                    .todo-component {
+                        width: 100%;
+                        border-radius: $main-border-radius;
+                        background-color: $light-secondary-color;
+                        padding: 1rem;
+                        margin-bottom: 1rem;
+    
+                        &-heading {
+                            @include displayType(row, center, space-between);
+                            margin-bottom: .3rem;
+    
+                            &-navigate {
+                                .icon {
+                                    margin-right: .5rem;
+                                    cursor: pointer;
+                                }
+                                .not-started {
+                                    color: $not-started-color;
+                                }
+                                .in-progress {
+                                    color: $in-progress-color;
+                                }
+                                .completed {
+                                    color: $complete-color;
+                                }
+                            }
+    
+                            &-delete {
+                                color: $black-color;
                                 cursor: pointer;
                             }
-                            .not-started {
-                                color: $not-started-color;
-                            }
-                            .in-progress {
-                                color: $in-progress-color;
-                            }
-                            .completed {
-                                color: $complete-color;
-                            }
-                        }
-
-                        &-delete {
-                            color: $black-color;
-                            cursor: pointer;
                         }
                     }
                 }
