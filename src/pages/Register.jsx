@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
+import RegisterPrompt from '../components/RegisterPrompt';
 import SearchBar from '../components/SearchBar';
 import Theme from '../components/Theme';
 import '../styles/css/register.css';
@@ -18,11 +19,12 @@ const Register = () => {
       <div className='container-main-container'>
         <SearchBar />
         <main className='container-main-content'>
-          <h1>Register</h1>
+          <h1 className='container-main-content-title'>Register</h1>
+          <RegisterPrompt />
         </main>
       </div>
     </div>
   )
 }
 
-export default Register
+export default Register;

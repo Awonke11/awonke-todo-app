@@ -5,3 +5,88 @@
   box-sizing: border-box;
   transition: 0.5s;
 }
+
+.container-main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: none;
+  justify-content: none;
+}
+.container-main-content-title {
+  font-size: 35px;
+  padding: 0.5rem 0;
+}
+.container-main-content .user-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: none;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+.container-main-content .user-profile-img {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+.container-main-content .user-profile-information-info {
+  margin-bottom: 0.5rem;
+}
+.container-main-content .user-profile-information-info-title {
+  font-size: 25px;
+  color: #000000;
+  font-weight: 700;
+}
+.container-main-content .user-profile-information-info-name, .container-main-content .user-profile-information-info-email {
+  font-size: 25px;
+  color: #04A7BD;
+  font-weight: 400;
+}
+.container-main-content .user-profile-information-button {
+  border: none;
+  outline: none;
+  background-color: #04A7BD;
+  padding: 1rem;
+  width: 7rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 700;
+}
+.container-main-content .more-apps-title {
+  font-size: 35px;
+  margin-bottom: 0.5rem;
+}
+.container-main-content .more-apps-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.container-main-content .more-apps-content-app {
+  width: 100%;
+  height: 9rem;
+  padding: 1rem;
+  background-color: rgb(8, 92, 22);
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.container-main-content .more-apps-content-app:hover {
+  transform: scale(1.1);
+}
+.container-main-content .more-apps-content-app-title {
+  font-size: 20px;
+  color: #FFFFFF;
+  margin-right: 1rem;
+}

@@ -1,1 +1,75 @@
 @import './mixins';
+
+.container-main-content {
+    @include displayType(column, none, none);
+    &-title {
+        font-size: $title-font-size;
+        padding: .5rem 0;
+    }
+
+    .user-profile {
+        @include displayType(row, center, none);
+        margin-top: .5rem;
+        margin-bottom: 2rem;
+
+        &-img {
+            @include images(15rem, 15rem);
+            margin-right: 2rem;
+        }
+
+        &-information {
+            &-info {
+                margin-bottom: .5rem;
+
+                &-title {
+                    font-size: $nav-titles-font-size;
+                    color: $black-color;
+                    font-weight: $bold;
+                }
+
+                &-name, 
+                &-email {
+                    font-size: $nav-titles-font-size;
+                    color: $main-color;
+                    font-weight: $light;
+                }
+            }
+
+            &-button {
+                @include allButton(1rem, 7rem, 2.5rem);
+            }
+        }
+    }
+
+    .more-apps {
+        &-title {
+            font-size: $title-font-size;
+            margin-bottom: 0.5rem;
+        }
+
+        &-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+
+            &-app {
+                @include dimensions(100%, 9rem, 1rem);
+                background-color: rgb(8, 92, 22);
+                border-radius: $main-border-radius;
+                cursor: pointer;
+                text-decoration: none;
+                @include displayType(column, flex-end, flex-end);
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                &-title {
+                    font-size: $secondary-font-size;
+                    color: $white-color;
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}

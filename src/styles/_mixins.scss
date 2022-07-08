@@ -7,12 +7,19 @@
     justify-content: $justification;
 }
 
-@mixin allButton($paddingType, $widthType) {
+@mixin allButton($paddingType, $widthType, $heightType: 100%) {
     border: none;
     outline: none;
     background-color: $main-color;
     padding: $paddingType;
     width: $widthType;
+    height: $heightType;
+    border-radius: $secodary-border-radius;
+    cursor: pointer;
+    @include displayType(column, center, center);
+    color: $white-color;
+    font-size: $secondary-font-size;
+    font-weight: $bold;
 }
 
 @mixin dimensions($width, $height, $padding) {
@@ -23,6 +30,12 @@
 
 @mixin nav-title() {
     font-size: $nav-titles-font-size;
-    color: $main-color;
+    color: $black-color;
     margin-bottom: .4rem;
+}
+
+@mixin images($width, $height) {
+    width: $width;
+    height: $height;
+    border-radius: 50%;
 }

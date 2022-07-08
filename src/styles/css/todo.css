@@ -77,34 +77,37 @@
   background-color: #CB0000;
   border-radius: 50%;
 }
-.container-main-container .container-main-content-todos .todo-sections .todo-component {
+.container-main-container .container-main-content-todos .todo-sections-display {
+  overflow-y: auto;
+}
+.container-main-container .container-main-content-todos .todo-sections-display .todo-component {
   width: 100%;
   border-radius: 20px;
   background-color: #E8EEED;
   padding: 1rem;
   margin-bottom: 1rem;
 }
-.container-main-container .container-main-content-todos .todo-sections .todo-component-heading {
+.container-main-container .container-main-content-todos .todo-sections-display .todo-component-heading {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0.3rem;
 }
-.container-main-container .container-main-content-todos .todo-sections .todo-component-heading-navigate .icon {
+.container-main-container .container-main-content-todos .todo-sections-display .todo-component-heading-navigate .icon {
   margin-right: 0.5rem;
   cursor: pointer;
 }
-.container-main-container .container-main-content-todos .todo-sections .todo-component-heading-navigate .not-started {
+.container-main-container .container-main-content-todos .todo-sections-display .todo-component-heading-navigate .not-started {
   color: #CB0000;
 }
-.container-main-container .container-main-content-todos .todo-sections .todo-component-heading-navigate .in-progress {
+.container-main-container .container-main-content-todos .todo-sections-display .todo-component-heading-navigate .in-progress {
   color: #BD7304;
 }
-.container-main-container .container-main-content-todos .todo-sections .todo-component-heading-navigate .completed {
+.container-main-container .container-main-content-todos .todo-sections-display .todo-component-heading-navigate .completed {
   color: #00A907;
 }
-.container-main-container .container-main-content-todos .todo-sections .todo-component-heading-delete {
+.container-main-container .container-main-content-todos .todo-sections-display .todo-component-heading-delete {
   color: #000000;
   cursor: pointer;
 }

@@ -1,1 +1,54 @@
 @import './mixins';
+
+.container-main-content {
+    &-title {
+        margin-bottom: 1rem;
+    }
+
+    .user-authentication {
+        @include dimensions(100%, 85%, 0);
+        
+        &-prompt {
+            @include dimensions(100%, 100%, 0);
+            @include displayType(column, center, none);
+
+            &-inputs {
+                @include dimensions(100%, 80%, 2rem);
+                @include displayType(column, none, space-around);
+                background-color: $light-secondary-color;
+                border-radius: $main-border-radius;
+
+                &-input {
+                    width: 100%;
+                    @include displayType(column, none, none);
+
+                    &-label {
+                        font-size: $nav-titles-font-size;
+                        font-weight: $bold;
+                    }
+
+                    &-type {
+                        width: 100%;
+                        outline: none;
+                        border: none;
+                        background-color: $light-background-color;
+                        padding: .6em;
+                        font-size: $secondary-font-size;
+                        font-weight: $light;
+                        border-radius: $secodary-border-radius;
+                    }
+                }
+            }
+
+            &-submit {
+                @include displayType(column, flex-end, center);
+                width: 100%;
+                margin: 1rem 0;
+
+                &-button {
+                    @include allButton(1rem, 8rem, 3rem);
+                }
+            }
+        }
+    }
+}

@@ -4,12 +4,13 @@
 .container {
     @include displayType(row, none, none);
     @include dimensions(100%, 100vh, 2rem);
+    overflow: hidden;
 
     #{&}-side-navigation {
         @include dimensions(20%, 100%, 0);
         
         &-nested {
-            @include dimensions(100%, 100%, 1rem);
+            @include dimensions(100%, 100%, 1.5rem);
             background-color: $light-secondary-color;
             border-radius: $main-border-radius;
             @include displayType(column, none, none);
@@ -40,6 +41,7 @@
             }
 
             &-links {
+                margin-bottom: .5rem;
                 &-title {
                     @include nav-title;
                 }
