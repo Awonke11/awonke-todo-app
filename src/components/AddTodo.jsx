@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const AddTodo = () => {
+    const [title, setTitle] = useState('')
+    const [description, setDescription] = useState('')
+
   return (
     <div className="add-todo-container">
         <div className="add-todo"> 
@@ -12,6 +15,10 @@ const AddTodo = () => {
                         name='title'
                         placeholder='Type title...' 
                         className="add-todo-form-input-field"
+                        value={title}
+                        onChange={(e) => {
+                            setTitle(e.target.value);
+                        }}
                     />
                 </div>
                 <div className="add-todo-form-input">
@@ -21,6 +28,10 @@ const AddTodo = () => {
                         name='description'
                         placeholder='Type description...' 
                         className="add-todo-form-input-field text-area"
+                        value={description}
+                        onChange={(e) => {
+                            setDescription(e.target.value);
+                        }}
                     />
                 </div>
             </div>
