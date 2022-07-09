@@ -1,6 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const LoginPrompt = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('')
+
   return (
     <div className='user-authentication'>
         <form className='user-authentication-prompt'>
@@ -13,6 +16,8 @@ const LoginPrompt = () => {
                         placeholder="Enter your email..."
                         className='user-authentication-prompt-inputs-input-type'
                         required
+                        value={email}
+                        onChange={(e) => {setEmail(e.target.value)}}
                     />
                 </div>
                 <div className='user-authentication-prompt-inputs-input'>
@@ -23,6 +28,8 @@ const LoginPrompt = () => {
                         placeholder="Enter your password..."
                         className='user-authentication-prompt-inputs-input-type'
                         required
+                        value={password}
+                        onChange={(e) => {setPassword(e.target.value)}}
                     />
                 </div>
             </div>

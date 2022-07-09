@@ -1,6 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react';
 
 const RegisterPrompt = () => {
+    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
   return (
     <div className='user-authentication'>
         <form className='user-authentication-prompt'>
@@ -13,6 +17,8 @@ const RegisterPrompt = () => {
                         placeholder="Enter your name..."
                         className='user-authentication-prompt-inputs-input-type'
                         required
+                        value={username}
+                        onChange={(e) => {setUsername(e.target.value)}}
                     />
                 </div>
                 <div className='user-authentication-prompt-inputs-input'>
@@ -23,6 +29,8 @@ const RegisterPrompt = () => {
                         placeholder="Enter your email..."
                         className='user-authentication-prompt-inputs-input-type'
                         required
+                        value={email}
+                        onChange={(e) => {setEmail(e.target.value)}}
                     />
                 </div>
                 <div className='user-authentication-prompt-inputs-input'>
@@ -33,6 +41,8 @@ const RegisterPrompt = () => {
                         placeholder="Enter your password..."
                         className='user-authentication-prompt-inputs-input-type'
                         required
+                        value={password}
+                        onChange={(e) => {setPassword(e.target.value)}}
                     />
                 </div>
             </div>
