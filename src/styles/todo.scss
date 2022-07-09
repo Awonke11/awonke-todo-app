@@ -96,5 +96,68 @@
                 }
             }
         }
+
+        .add-todo-container {
+            position: absolute;
+            @include dimensions(100%, 100%, 0);
+            z-index: 2;
+            @include displayType(column, center, center);
+
+            .add-todo {
+                background-color: $white-color;
+                @include dimensions(80%, 80%, 3rem);
+                border-radius: $main-border-radius;
+                box-shadow: $light-box-shadow;
+                @include displayType(column, center, space-between);
+
+                &-form {
+                    @include dimensions(100%, 80%, 0);
+                    @include displayType(column, center, space-around);
+
+                    &-input {
+                        @include dimensions(100%, 50%, 0);
+                        @include displayType(column, center, center);
+
+                        &-title {
+                            font-size: $nav-titles-font-size;
+                            font-weight: $bold;
+                        }
+
+                        &-field {
+                            width: 100%;
+                            padding: 1rem;
+                            border: none;
+                            outline: none;
+                            background-color: $light-secondary-color;
+                            border-radius: $secodary-border-radius;
+                        }
+
+                        .text-area {
+                            height: 8rem;
+                            resize: none;
+                        }
+                    }
+                }
+
+                &-buttons {
+                    @include dimensions(100%, 20%, 0);
+                    @include displayType(row, center, center);
+                    margin-top: 1rem;
+
+                    &-button {
+                        @include allButton(1rem, 8rem, 2.5rem);
+                        margin-left: .7rem;
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+
+                    .cancel-button {
+                        background-color: $not-started-color;
+                    }
+                }
+            }
+        }
     }
 }

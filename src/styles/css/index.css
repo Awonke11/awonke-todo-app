@@ -31,17 +31,17 @@
   display: flex;
   flex-direction: column;
   align-items: none;
-  justify-content: none;
+  justify-content: space-between;
+  padding-bottom: 3rem;
 }
 .container .container-side-navigation .navigation {
   display: flex;
   flex-direction: column;
   align-items: none;
-  justify-content: none;
+  justify-content: space-between;
   width: 100%;
   height: 65%;
   padding: 0;
-  margin-bottom: 3.5rem;
 }
 .container .container-side-navigation .navigation-profile-and-widget {
   margin-bottom: 3.5rem;
@@ -138,4 +138,7 @@
   border: none;
   outline: none;
   font-weight: 400;
+}
+.container .container-main-container .container-main-content {
+  position: relative;
 }

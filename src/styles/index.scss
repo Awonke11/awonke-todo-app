@@ -13,13 +13,14 @@
             @include dimensions(100%, 100%, 1.5rem);
             background-color: $light-secondary-color;
             border-radius: $main-border-radius;
-            @include displayType(column, none, none);
+            @include displayType(column, none, space-between);
+            padding-bottom: 3rem;
         }
 
         .navigation {
-            @include displayType(column, none, none);
+            @include displayType(column, none, space-between);
             @include dimensions(100%, 65%, 0);
-            margin-bottom: 3.5rem;
+            // margin-bottom: 3.5rem;
             
             &-profile-and-widget {
                 margin-bottom: 3.5rem;
@@ -112,6 +113,10 @@
                 outline: none;
                 font-weight: $light;
             }
+        }
+
+        .container-main-content {
+            position: relative;
         }
     }
 }
