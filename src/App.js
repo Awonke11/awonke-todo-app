@@ -5,6 +5,7 @@ import Todo from "./pages/Todo";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Settings from "./pages/Settings";
+import './styles/css/theme.css'
 
 function App() {
   return (

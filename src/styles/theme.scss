@@ -1,1 +1,121 @@
 @import './mixins';
+
+#dark {
+    background-color: $dark-background-color;
+
+    .container-side-navigation-nested {
+        background-color: $dark-secondary-color;
+
+        .navigation-profile-and-widget {
+            .widget-date {
+                color: $light-text-color;
+            }
+        }
+
+        .navigation-links {
+            &-title {
+                color: $light-text-color;
+            }
+            &-link {
+                &-title {
+                    color: $light-text-color;
+                }
+                .icon {
+                    color: $light-text-color;
+                }
+            }
+            .active {
+                .icon {
+                    color: $main-color;
+                }
+                .navigation-links-link-title {
+                    color: $main-color;
+                }
+            }
+
+        }
+        .themes {
+            &-title {
+                color: $light-text-color;
+            }
+
+            .theme {
+                &-icon,
+                &-title {
+                    color: $light-text-color;
+                }
+            }
+        }
+    }
+
+    .search-bar {
+        border-bottom: 2px solid $white-color;
+
+        &-input {
+            color: $light-text-color;
+        }
+    }
+    .container-main-content-heading-title,
+    .container-main-content-title {
+        color: $light-text-color;
+    }
+
+    .todo-sections-heading {
+        &-title {
+            color: $light-text-color;
+        }
+        &-todos-number {
+            color: $light-text-color;
+        }
+    }
+    .todo-component {
+        background-color: $dark-secondary-color;
+
+        .todo-component-heading-delete {
+            color: $light-text-color;
+        }
+
+        .todo-component-content-title,
+        .todo-component-content-description {
+            color: $light-text-color;
+        }
+    }
+
+    .add-todo {
+        background-color: $dark-secondary-color;
+        box-shadow: $dark-box-shadow;
+
+        .add-todo-form-input-title {
+            color: $light-text-color;
+        }
+
+        .add-todo-form-input-field {
+            background-color: $black-color;
+            color: $light-text-color;
+        }
+    }
+
+    .user-authentication-prompt-inputs {
+        background-color: $dark-secondary-color;
+
+        .user-authentication-prompt-inputs-input-label {
+            color: $light-text-color;
+        }
+
+        .user-authentication-prompt-inputs-input-type {
+            color: $light-text-color;
+            background-color: $black-color;
+        }
+    }
+
+    .user-profile-information-info-title {
+        color: $light-text-color;
+    }
+
+    .click {
+        .theme-icon,
+        .theme-title {
+            color: $main-color;
+        }
+    }
+}

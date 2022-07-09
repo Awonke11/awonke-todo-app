@@ -18,7 +18,7 @@
     cursor: pointer;
     @include displayType(column, center, center);
     color: $white-color;
-    font-size: $secondary-font-size;
+    font-size: $todo-title-font-size;
     font-weight: $bold;
 }
 

@@ -138,7 +138,12 @@
   border: none;
   outline: none;
   font-weight: 400;
+  background: transparent;
 }
 .container .container-main-container .container-main-content {
   position: relative;
+}
+.container .clicked .theme-icon,
+.container .clicked .theme-title {
+  color: #04A7BD;
 }

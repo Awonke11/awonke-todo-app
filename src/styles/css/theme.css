@@ -5,3 +5,88 @@
   box-sizing: border-box;
   transition: 0.5s;
 }
+
+#dark {
+  background-color: #000000;
+}
+#dark .container-side-navigation-nested {
+  background-color: #171717;
+}
+#dark .container-side-navigation-nested .navigation-profile-and-widget .widget-date {
+  color: #FFFFFF;
+}
+#dark .container-side-navigation-nested .navigation-links-title {
+  color: #FFFFFF;
+}
+#dark .container-side-navigation-nested .navigation-links-link-title {
+  color: #FFFFFF;
+}
+#dark .container-side-navigation-nested .navigation-links-link .icon {
+  color: #FFFFFF;
+}
+#dark .container-side-navigation-nested .navigation-links .active .icon {
+  color: #04A7BD;
+}
+#dark .container-side-navigation-nested .navigation-links .active .navigation-links-link-title {
+  color: #04A7BD;
+}
+#dark .container-side-navigation-nested .themes-title {
+  color: #FFFFFF;
+}
+#dark .container-side-navigation-nested .themes .theme-icon, #dark .container-side-navigation-nested .themes .theme-title {
+  color: #FFFFFF;
+}
+#dark .search-bar {
+  border-bottom: 2px solid #FFFFFF;
+}
+#dark .search-bar-input {
+  color: #FFFFFF;
+}
+#dark .container-main-content-heading-title,
+#dark .container-main-content-title {
+  color: #FFFFFF;
+}
+#dark .todo-sections-heading-title {
+  color: #FFFFFF;
+}
+#dark .todo-sections-heading-todos-number {
+  color: #FFFFFF;
+}
+#dark .todo-component {
+  background-color: #171717;
+}
+#dark .todo-component .todo-component-heading-delete {
+  color: #FFFFFF;
+}
+#dark .todo-component .todo-component-content-title,
+#dark .todo-component .todo-component-content-description {
+  color: #FFFFFF;
+}
+#dark .add-todo {
+  background-color: #171717;
+  box-shadow: 0px 4px 20px 10px rgba(255, 255, 255, 0.2);
+}
+#dark .add-todo .add-todo-form-input-title {
+  color: #FFFFFF;
+}
+#dark .add-todo .add-todo-form-input-field {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+#dark .user-authentication-prompt-inputs {
+  background-color: #171717;
+}
+#dark .user-authentication-prompt-inputs .user-authentication-prompt-inputs-input-label {
+  color: #FFFFFF;
+}
+#dark .user-authentication-prompt-inputs .user-authentication-prompt-inputs-input-type {
+  color: #FFFFFF;
+  background-color: #000000;
+}
+#dark .user-profile-information-info-title {
+  color: #FFFFFF;
+}
+#dark .click .theme-icon,
+#dark .click .theme-title {
+  color: #04A7BD;
+}

@@ -112,11 +112,19 @@
                 border: none;
                 outline: none;
                 font-weight: $light;
+                background: transparent;
             }
         }
 
         .container-main-content {
             position: relative;
+        }
+    }
+
+    .clicked {
+        .theme-icon,
+        .theme-title {
+            color: $main-color;
         }
     }
 }
