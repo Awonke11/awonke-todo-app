@@ -4,6 +4,8 @@ const AddTodo = () => {
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
 
+    console.log("Check out")
+
   return (
     <div className="add-todo-container">
         <div className="add-todo"> 
