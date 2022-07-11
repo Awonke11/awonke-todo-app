@@ -1,9 +1,32 @@
-import React, {useState} from 'react'
+import {useState, useContext} from 'react';
+import AppContextProvider from '../context/AppContextProvider';
+import { auth } from '../auth/firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import {useNavigate} from 'react-router-dom';
 
 const LoginPrompt = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('')
+    const { setUser, user } = useContext(AppContextProvider)
 
+    const navigate = useNavigate()
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (email === '' && password === '') {
+            alert("All fields are required")
+        } else {
+            signInWithEmailAndPassword(auth, email, password).then((response) => {
+                alert("User logged in");
+                setUser({
+                    username: user.username,
+                    email: email,
+                    login: true
+                });
+                navigate("/")
+            })
+        }
+    }
   return (
     <div className='user-authentication'>
         <form className='user-authentication-prompt'>
@@ -34,7 +57,7 @@ const LoginPrompt = () => {
                 </div>
             </div>
             <div className='user-authentication-prompt-submit'>
-                <button className='user-authentication-prompt-submit-button'>Login</button>
+                <button className='user-authentication-prompt-submit-button' onClick={handleSubmit}>Login</button>
             </div>
         </form>
     </div>

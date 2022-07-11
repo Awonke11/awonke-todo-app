@@ -6,8 +6,11 @@ export const AppMainContext = ({children}) => {
     const [theme, setTheme] = useState('light');
     const [selectedLight, setSelectedLight] = useState('clicked')
     const [selectedDark, setSelectedDark] = useState('')
+    const [notStartedNumber, setNotStartedNumber] = useState(0)
+    const [inProgressNumber, setInProgressNumber] = useState(1)
+    const [completedNumber, setCompletedNumber] = useState(3)
     const [user, setUser] = useState({
-        username: 'User',
+        username: 'Username',
         email: 'user@email.com',
         login: false
     })
@@ -21,7 +24,13 @@ export const AppMainContext = ({children}) => {
             selectedLight, 
             setSelectedLight,
             selectedDark,
-            setSelectedDark
+            setSelectedDark,
+            inProgressNumber,
+            setInProgressNumber,
+            notStartedNumber,
+            setNotStartedNumber,
+            completedNumber,
+            setCompletedNumber
         }}>
             {children}
         </AppContextProvider.Provider>

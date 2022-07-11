@@ -80,3 +80,6 @@
   font-size: 16px;
   font-weight: 700;
 }
+.container-main-content .user-authentication-prompt-submit-button:hover {
+  transform: scale(1.1);
+}

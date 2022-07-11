@@ -37,6 +37,17 @@
 
             &-button {
                 @include allButton(1rem, 7rem, 2.5rem);
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+            &-button-register {
+                text-decoration: none;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
         }
     }

@@ -38,6 +38,7 @@
   background-color: #04A7BD;
   padding: 0.8rem;
   border-radius: 10px;
+  text-decoration: none;
 }
 .container-main-container .container-main-content-heading-add-todo-title {
   font-size: 1rem;

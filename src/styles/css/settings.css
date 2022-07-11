@@ -60,6 +60,15 @@
   font-size: 16px;
   font-weight: 700;
 }
+.container-main-content .user-profile-information-button:hover {
+  transform: scale(1.1);
+}
+.container-main-content .user-profile-information-button-register {
+  text-decoration: none;
+}
+.container-main-content .user-profile-information-button-register:hover {
+  transform: scale(1.1);
+}
 .container-main-content .more-apps-title {
   font-size: 35px;
   margin-bottom: 0.5rem;

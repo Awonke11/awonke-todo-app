@@ -47,6 +47,10 @@
 
                 &-button {
                     @include allButton(1rem, 8rem, 3rem);
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
                 }
             }
         }

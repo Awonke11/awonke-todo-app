@@ -1,9 +1,36 @@
-import React, {useState} from 'react';
+import {useState, useContext} from 'react';
+import {createUserWithEmailAndPassword} from 'firebase/auth';
+import {auth} from "../auth/firebase";
+import AppContextProvider from '../context/AppContextProvider';
+import {useNavigate} from 'react-router-dom'
 
 const RegisterPrompt = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const { setUser } = useContext(AppContextProvider);
+
+    const navigate = useNavigate();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (username === '' && email === '' && password === '') {
+            alert("All fields are required")
+        } else {
+            createUserWithEmailAndPassword(auth, email, password).then((response) => {
+                console.log(response.user.displayName)
+                response.user.displayName = username
+                setUser({
+                    username: username,
+                    email: email,
+                    login: true
+                });
+                navigate('/')
+            }).catch((err) => {
+                alert("User not created")
+                console.log(err.message)
+            })
+        }
+    }
 
   return (
     <div className='user-authentication'>
@@ -47,7 +74,7 @@ const RegisterPrompt = () => {
                 </div>
             </div>
             <div className='user-authentication-prompt-submit'>
-                <button className='user-authentication-prompt-submit-button'>Register</button>
+                <button className='user-authentication-prompt-submit-button' onClick={handleSubmit}>Register</button>
             </div>
         </form>
     </div>

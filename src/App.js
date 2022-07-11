@@ -13,7 +13,7 @@ function App() {
     <Router>
       <AppMainContext>
         <Routes>
-          <Route index exact element={<Todo/>} />
+          <Route path='/' exact element={<Todo/>} />
           <Route path='/login' exact element={<Login/>} />
           <Route path='/register' exact element={<Register/>} />
           <Route path='/settings' exact element={<Settings/>} />
