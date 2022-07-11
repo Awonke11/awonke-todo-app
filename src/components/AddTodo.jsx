@@ -1,13 +1,11 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 
 const AddTodo = () => {
-    const [title, setTitle] = useState('')
-    const [description, setDescription] = useState('')
-
-    console.log("Check out")
+    const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
 
   return (
-    <div className="add-todo-container">
+    <div className={`add-todo-container`}>
         <div className="add-todo"> 
             <div className="add-todo-form">
                 <div className="add-todo-form-input">
@@ -39,7 +37,7 @@ const AddTodo = () => {
             </div>
             <div className="add-todo-buttons">
                 <button className="add-todo-buttons-button add-todo-button">Add</button>
-                <button className="add-todo-buttons-button cancel-button">Cancel</button>
+                <button className="add-todo-buttons-button cancel-button" onClick={() => {alert("Clicked")}}>Cancel</button>
             </div>
         </div>
     </div>
@@ -47,3 +45,4 @@ const AddTodo = () => {
 }
 
 export default AddTodo;
+

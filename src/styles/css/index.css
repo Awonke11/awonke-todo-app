@@ -147,3 +147,7 @@
 .container .clicked .theme-title {
   color: #04A7BD;
 }
+.container .click .theme-icon,
+.container .click .theme-title {
+  color: #04A7BD;
+}

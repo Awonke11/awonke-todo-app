@@ -1,22 +1,20 @@
-import React, {useState} from 'react';
+import {useContext} from 'react';
 import Navigation from '../components/Navigation';
 import RegisterPrompt from '../components/RegisterPrompt';
 import SearchBar from '../components/SearchBar';
 import Theme from '../components/Theme';
 import '../styles/css/register.css';
+import AppContextProvider from '../context/AppContextProvider';
 
 const Register = () => {
-  const [theme, setTheme] = useState('')
-  const toggleLightTheme = () => {setTheme('light')}
-  const toggleDarkTheme = () => {setTheme('dark')}
-
+  const {theme} = useContext(AppContextProvider)
   return (
     <div className='container' id={theme}>
       
       <div className="container-side-navigation">
         <div className="container-side-navigation-nested">
           <Navigation />
-          <Theme toggleLight={toggleLightTheme} toggleDark={toggleDarkTheme}/>
+          <Theme />
         </div>
       </div>
 

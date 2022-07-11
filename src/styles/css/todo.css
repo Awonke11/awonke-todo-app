@@ -43,6 +43,9 @@
   font-size: 1rem;
   margin-right: 0.5rem;
 }
+.container-main-container .container-main-content-heading-add-todo:hover {
+  transform: scale(1.1);
+}
 .container-main-container .container-main-content-todos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -77,6 +80,18 @@
   background-color: #CB0000;
   border-radius: 50%;
 }
+.container-main-container .container-main-content-todos .todo-sections .in-progress {
+  border-bottom: 3px solid #BD7304;
+}
+.container-main-container .container-main-content-todos .todo-sections .in-progress .todo-sections-heading-todos-number {
+  background-color: #BD7304;
+}
+.container-main-container .container-main-content-todos .todo-sections .completed {
+  border-bottom: 3px solid #00A907;
+}
+.container-main-container .container-main-content-todos .todo-sections .completed .todo-sections-heading-todos-number {
+  background-color: #00A907;
+}
 .container-main-container .container-main-content-todos .todo-sections-display {
   overflow-y: auto;
 }
@@ -98,18 +113,21 @@
   margin-right: 0.5rem;
   cursor: pointer;
 }
-.container-main-container .container-main-content-todos .todo-sections-display .todo-component-heading-navigate .not-started {
+.container-main-container .container-main-content-todos .todo-sections-display .todo-component-heading-navigate .not-started-icon {
   color: #CB0000;
 }
-.container-main-container .container-main-content-todos .todo-sections-display .todo-component-heading-navigate .in-progress {
+.container-main-container .container-main-content-todos .todo-sections-display .todo-component-heading-navigate .in-progress-icon {
   color: #BD7304;
 }
-.container-main-container .container-main-content-todos .todo-sections-display .todo-component-heading-navigate .completed {
+.container-main-container .container-main-content-todos .todo-sections-display .todo-component-heading-navigate .completed-icon {
   color: #00A907;
 }
 .container-main-container .container-main-content-todos .todo-sections-display .todo-component-heading-delete {
   color: #000000;
   cursor: pointer;
+}
+.container-main-container .container-main-content .hide-todo {
+  display: none;
 }
 .container-main-container .container-main-content .add-todo-container {
   position: absolute;
@@ -121,6 +139,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: none;
+  display: none;
 }
 .container-main-container .container-main-content .add-todo-container .add-todo {
   background-color: #FFFFFF;

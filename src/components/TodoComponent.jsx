@@ -6,9 +6,9 @@ const TodoComponent = () => {
     <div className="todo-component">
       <div className="todo-component-heading">
         <div className='todo-component-heading-navigate'>
-          <FaCircle className='icon not-started'/>
-          <FaCircle className='icon in-progress'/>
-          <FaCircle className='icon completed'/>
+          <FaCircle className='icon not-started-icon'/>
+          <FaCircle className='icon in-progress-icon'/>
+          <FaCircle className='icon completed-icon'/>
         </div>
         <FaRegTrashAlt className='todo-component-heading-delete'/>
       </div>

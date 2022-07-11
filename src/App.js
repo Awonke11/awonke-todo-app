@@ -6,16 +6,19 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Settings from "./pages/Settings";
 import './styles/css/theme.css'
+import { AppMainContext } from './context/AppContextProvider';
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route index exact element={<Todo/>} />
-        <Route path='/login' exact element={<Login/>} />
-        <Route path='/register' exact element={<Register/>} />
-        <Route path='/settings' exact element={<Settings/>} />
-      </Routes>
+      <AppMainContext>
+        <Routes>
+          <Route index exact element={<Todo/>} />
+          <Route path='/login' exact element={<Login/>} />
+          <Route path='/register' exact element={<Register/>} />
+          <Route path='/settings' exact element={<Settings/>} />
+        </Routes>
+      </AppMainContext>
     </Router>
   );
 }

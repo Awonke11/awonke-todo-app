@@ -1,29 +1,36 @@
-import React, {useState} from 'react'
+import {useContext} from 'react'
 import { FaMoon, FaSun } from 'react-icons/fa'
+import AppContextProvider from '../context/AppContextProvider';
 
-const Theme = ({toggleLight, toggleDark}) => {
-  const [lightClicked, setLightClicked] = useState('')
-  const [darkClicked, setDarkClicked] = useState('')
+const Theme = () => {
+
+  const {
+    setTheme, 
+    selectedLight, 
+    selectedDark, 
+    setSelectedDark, 
+    setSelectedLight
+  } = useContext(AppContextProvider)
 
   return (
     <div className="themes">
       <h1 className='themes-title'>Theme</h1>
       <div 
-        className={`theme ${lightClicked}`} 
+        className={`theme ${selectedLight}`} 
         onClick={() => {
-          toggleLight()
-          setLightClicked('clicked')
-          setDarkClicked('')
+          setTheme('light')
+          setSelectedDark('')
+          setSelectedLight('clicked')
         }}>
         <FaSun className='theme-icon'/>
         <h2 className='theme-title'>Light</h2>
       </div>
       <div 
-        className={`theme ${darkClicked}`} 
+        className={`theme ${selectedDark}`} 
         onClick={() => {
-          toggleDark()
-          setDarkClicked('clicked')
-          setLightClicked('')
+          setTheme('dark')
+          setSelectedDark("click")
+          setSelectedLight('')
         }}>
         <FaMoon className='theme-icon'/>
         <h2 className='theme-title'>Dark</h2>

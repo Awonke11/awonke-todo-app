@@ -28,6 +28,10 @@
                     font-size: 1rem;
                     margin-right: .5rem;
                 }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
         }
 
@@ -58,6 +62,22 @@
                     }
                 }
 
+                .in-progress {
+                    border-bottom: 3px solid $in-progress-color;
+
+                    .todo-sections-heading-todos-number {
+                        background-color: $in-progress-color;
+                    }
+                }
+
+                .completed {
+                    border-bottom: 3px solid $complete-color;
+
+                    .todo-sections-heading-todos-number {
+                        background-color: $complete-color;
+                    }
+                }
+
                 &-display {
                     overflow-y: auto;
                     .todo-component {
@@ -76,13 +96,13 @@
                                     margin-right: .5rem;
                                     cursor: pointer;
                                 }
-                                .not-started {
+                                .not-started-icon {
                                     color: $not-started-color;
                                 }
-                                .in-progress {
+                                .in-progress-icon {
                                     color: $in-progress-color;
                                 }
-                                .completed {
+                                .completed-icon {
                                     color: $complete-color;
                                 }
                             }
@@ -97,11 +117,17 @@
             }
         }
 
+        .hide-todo {
+            display: none;
+        }
+
         .add-todo-container {
             position: absolute;
             @include dimensions(100%, 100%, 0);
             z-index: 2;
             @include displayType(column, center, center);
+            background: none;
+            display: none;
 
             .add-todo {
                 background-color: $white-color;
